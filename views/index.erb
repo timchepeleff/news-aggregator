@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+
+  </head>
+
+  <body>
+    <h1> Slacker News </h1>
+
+    <ul>
+    <p><% articles.each do |i| %>
+          <h3>Article:  <a href="http://<%= i[1] %>"><%= i[0] %></a><br></h3>
+          Description: <%= i[2] %><br>
+          <br>
+        <% end %>
+    </p>
+
+    <button type="button"><a href = "articles/new/">Write new article</a></button>
+    </ul>
+  </body>
+</html>
